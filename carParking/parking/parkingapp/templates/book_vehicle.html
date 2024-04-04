@@ -1,0 +1,12 @@
+<!-- book_vehicle.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Book Vehicle: {{ vehicle.make }} {{ vehicle.model }} ({{ vehicle.year }})</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Book</button>
+    </form>
+{% endblock %}
+
